@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand-dark: #1a1a1a;
+  --color-brand-light: #fdfdfc;
+  --color-accent: #4f46e5;
+  --color-accent-soft: #eef2ff;
+  --color-border: rgba(0, 0, 0, 0.08);
+}
+
+@layer base {
+  body {
+    @apply bg-brand-light text-brand-dark font-sans antialiased selection:bg-accent/10 selection:text-brand-dark min-h-screen;
+    background-image: 
+      radial-gradient(at 0% 0%, rgba(79, 70, 229, 0.03) 0, transparent 50%), 
+      radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.03) 0, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  .bento-card {
+    @apply bg-white border border-border shadow-[0_2px_4px_rgba(0,0,0,0.02),0_10px_20px_rgba(0,0,0,0.03)] rounded-[2rem] transition-all duration-500 overflow-hidden;
+  }
+  
+  .glass-panel {
+    @apply bg-white/40 backdrop-blur-2xl border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.05)];
+  }
+
+  .mesh-bg {
+    @apply fixed inset-0 -z-20 opacity-40 pointer-events-none;
+    background: 
+      radial-gradient(circle at 20% 30%, #4f46e5 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, #ec4899 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, #8b5cf6 0%, transparent 50%);
+    filter: blur(120px);
+  }
+  
+  .grid-bg {
+    @apply fixed inset-0 -z-10 opacity-[0.02] pointer-events-none;
+    background-image: linear-gradient(to right, #000 1px, transparent 1px), linear-gradient(to bottom, #000 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
