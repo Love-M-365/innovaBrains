@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plane, Users, Briefcase, Globe } from 'lucide-react';
 import { CategoryCard } from './components/CategoryCard';
@@ -49,48 +49,21 @@ const CATEGORIES = [
 
 export default function App() {
   const [activeCategory, setActiveCategory] = useState(null);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const selectedData = CATEGORIES.find(c => c.id === activeCategory);
-
-  // ✅ Preload images for smooth UX
-  useEffect(() => {
-    const allImages = CATEGORIES.flatMap(cat => cat.images);
-    let loadedCount = 0;
-
-    allImages.forEach(src => {
-      const img = new Image();
-      img.src = src;
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === allImages.length) {
-          setImagesLoaded(true);
-        }
-      };
-    });
-  }, []);
 
   return (
     <div className="min-h-screen relative overflow-x-hidden">
       {/* Background Layers */}
       <div className="mesh-bg opacity-[0.25]" />
       <div className="grid-bg" />
-
-      {/* ✅ Global subtle loader overlay */}
-      {!imagesLoaded && (
-        <div className="absolute inset-0 z-50 flex items-center justify-center bg-white/60 backdrop-blur-sm">
-          <div className="animate-pulse text-xs tracking-[0.3em] uppercase text-brand-dark/40">
-            Loading...
-          </div>
-        </div>
-      )}
       
       <AnimatePresence mode="wait">
         {!activeCategory ? (
           <motion.div
             key="landing"
             initial={{ opacity: 0 }}
-            animate={{ opacity: imagesLoaded ? 1 : 0.6 }}
+            animate={{ opacity: 1 }} // ✅ always smooth, no dependency
             exit={{ opacity: 0, scale: 1.05 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col min-h-screen relative z-10"
