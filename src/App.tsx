@@ -5,20 +5,20 @@ import { CategoryCard } from './components/CategoryCard';
 import { Portal } from './components/Portal';
 
 // ✅ Import images
-import t1 from './assets/t1.jpg';
-import t2 from './assets/t2.jpg';
-import t3 from './assets/t3.jpg';
-import t4 from './assets/t4.jpg';
+import t1 from '../assets/t1.jpg';
+import t2 from '../assets/t2.jpg';
+import t3 from '../assets/t3.jpg';
+import t4 from '../assets/t4.jpg';
 
-import h1 from './assets/h1.jpg';
-import h2 from './assets/h2.jpg';
-import h3 from './assets/h3.jpg';
-import h4 from './assets/h4.jpg';
+import h1 from '../assets/h1.jpg';
+import h2 from '../assets/h2.jpg';
+import h3 from '../assets/h3.jpg';
+import h4 from '../assets/h4.jpg';
 
-import b1 from './assets/b1.jpg';
-import b2 from './assets/b2.jpg';
-import b3 from './assets/b3.jpg';
-import b4 from './assets/b4.jpg';
+import b1 from '../assets/b1.jpg';
+import b2 from '../assets/b2.jpg';
+import b3 from '../assets/b3.jpg';
+import b4 from '../assets/b4.jpg';
 
 const CATEGORIES = [
   {
