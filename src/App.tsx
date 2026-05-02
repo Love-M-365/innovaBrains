@@ -116,11 +116,7 @@ export default function App() {
 
       {/* LANDING */}
       <div ref={landingRef} className={landingClass}>
-        <div className="nav-contact">
-  <a href="tel:+919911949189">+91 99119 49189</a>
-  <span className="dot" />
-  <a href="mailto:mail@innovabrains.com">mail@innovabrains.com</a>
-</div>
+     
         <nav className="main-nav">
           <div className="logo">
             <div className="logo-icon">
