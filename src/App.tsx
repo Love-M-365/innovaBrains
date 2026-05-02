@@ -116,6 +116,11 @@ export default function App() {
 
       {/* LANDING */}
       <div ref={landingRef} className={landingClass}>
+        <div className="nav-contact">
+  <a href="tel:+919911949189">+91 99119 49189</a>
+  <span className="dot" />
+  <a href="mailto:mail@innovabrains.com">mail@innovabrains.com</a>
+</div>
         <nav className="main-nav">
           <div className="logo">
             <div className="logo-icon">
@@ -166,13 +171,25 @@ export default function App() {
         </main>
 
         <footer className="main-footer">
-          <p className="footer-copy">© 2026 Innova Brains</p>
-          <div className="footer-links">
-            {['Ethics', 'Manifesto', 'Privacy'].map((item) => (
-              <span key={item} className="footer-link">{item}</span>
-            ))}
-          </div>
-        </footer>
+  <p className="footer-copy">© 2026 Innova Brains</p>
+
+  <div className="footer-links">
+    {['Ethics', 'Manifesto', 'Privacy'].map((item) => (
+      <span key={item} className="footer-link">{item}</span>
+    ))}
+  </div>
+
+  {/* ── Contact ── */}
+  <div className="footer-contact">
+    <a href="tel:+919911949189" className="footer-contact-item">
+      +91 99119 49189
+    </a>
+    <span className="footer-contact-sep">·</span>
+    <a href="mailto:mail@innovabrains.com" className="footer-contact-item">
+      mail@innovabrains.com
+    </a>
+  </div>
+</footer>
       </div>
 
       {/* PORTAL — always mounted so images stay cached, hidden via CSS */}
@@ -182,6 +199,7 @@ export default function App() {
           onBack={handleBack}
         />
       </div>
+      
     </div>
   );
 }

@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+
+
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
@@ -67,6 +69,7 @@ body {
   overflow: hidden;
 }
 
+
 .screen {
   position: absolute;
   inset: 0;
@@ -102,6 +105,80 @@ body {
   align-items: center;
   gap: 0.75rem;
   cursor: pointer;
+}
+/* ─────────────────────────────────────────
+   MAIN FOOTER — CONTACT (Landing)
+───────────────────────────────────────── */
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(26, 26, 26, 0.45);   /* matches .footer-link exactly */
+  text-decoration: none;
+  transition: color 0.25s, transform 0.25s;
+}
+.footer-contact-item:hover {
+  color: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.footer-contact-sep {
+  font-size: 0.55rem;
+  color: rgba(26, 26, 26, 0.15);
+  font-weight: 700;
+}
+
+/* ─────────────────────────────────────────
+   PORTAL FOOTER — CONTACT
+───────────────────────────────────────── */
+.portal-footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: center;
+
+  /* Vertical separator lines on both sides */
+  padding: 0 2rem;
+  border-left: 1px solid rgba(26, 26, 26, 0.07);
+  border-right: 1px solid rgba(26, 26, 26, 0.07);
+}
+
+.portal-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: rgba(26, 26, 26, 0.4);   /* matches .portal-footer-brand */
+  text-decoration: none;
+  transition: color 0.25s, transform 0.25s;
+  white-space: nowrap;
+}
+.portal-contact-item:hover {
+  color: #4f46e5;
+  transform: translateX(2px);
+}
+
+.portal-contact-icon {
+  color: #4f46e5;
+  opacity: 0.5;
+  flex-shrink: 0;
+  transition: opacity 0.25s;
+}
+.portal-contact-item:hover .portal-contact-icon {
+  opacity: 1;
 }
 
 .logo-icon {

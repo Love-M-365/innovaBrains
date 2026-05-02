@@ -1,4 +1,4 @@
-import { ArrowLeft, Clock } from 'lucide-react';
+import { ArrowLeft, Clock, Phone, Mail } from 'lucide-react';
 import React from 'react';
 
 interface PortalProps {
@@ -62,6 +62,19 @@ export const Portal: React.FC<PortalProps> = ({ category, onBack }) => {
             ))}
           </div>
         </div>
+
+        {/* ── Contact Info ── */}
+        <div className="portal-footer-contact">
+          <a href="tel:+919911949189" className="portal-contact-item">
+            <Phone size={12} className="portal-contact-icon" />
+            <span>+91 99119 49189</span>
+          </a>
+          <a href="mailto:mail@innovabrains.com" className="portal-contact-item">
+            <Mail size={12} className="portal-contact-icon" />
+            <span>mail@innovabrains.com</span>
+          </a>
+        </div>
+
         <span className="portal-footer-deploy">
           Projected Deployment Q3 2026
         </span>
