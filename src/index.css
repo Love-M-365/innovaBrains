@@ -181,6 +181,75 @@ body {
   opacity: 1;
 }
 
+/* ─────────────────────────────────────────
+   MAIN FOOTER — MOBILE
+───────────────────────────────────────── */
+@media (max-width: 640px) {
+  .main-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+  }
+
+  .footer-links {
+    gap: 1.25rem;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .footer-contact-sep {
+    display: none;
+  }
+
+  .footer-contact-item {
+    letter-spacing: 0.15em;
+  }
+}
+
+/* ─────────────────────────────────────────
+   PORTAL FOOTER — MOBILE
+───────────────────────────────────────── */
+@media (max-width: 640px) {
+  .portal-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+  }
+
+  .portal-footer-left {
+    align-items: center;
+  }
+
+  .portal-footer-contact {
+    flex-direction: row;        /* phone + email side by side */
+    gap: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgba(26, 26, 26, 0.07);
+    border-bottom: 1px solid rgba(26, 26, 26, 0.07);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .portal-contact-item {
+    letter-spacing: 0.12em;
+    font-size: 0.55rem;
+  }
+
+  .portal-footer-deploy {
+    font-size: 0.5rem;
+    letter-spacing: 0.25em;
+  }
+}
 .logo-icon {
   width: 44px;
   height: 44px;
